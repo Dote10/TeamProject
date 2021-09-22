@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.JAGym.system.dao.MemberSysCountDao;
+import com.JAGym.system.dao.MemberChartCountDao;
 import com.JAGym.system.dto.MemberChartDto;
 
 
@@ -23,7 +23,7 @@ import com.JAGym.system.dto.MemberChartDto;
 public class HomeController {
 	
 	@Autowired
-	MemberSysCountDao service;
+	MemberChartCountDao service;
 	
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)

@@ -37,12 +37,19 @@
 		
 
 		var membercountlist = new Array();
+		var centercountlist = new Array();
 		
 		<c:forEach var = "member" items="${memberChart}" varStatus="status">
 		membercountlist.push("${member.mCount}");
 		</c:forEach>
 		
 		console.log(membercountlist);
+		
+		<c:forEach var = "center" items="${centerChart}" varStatus="status">
+		centercountlist.push("${center.cCount}");
+		</c:forEach>
+		
+		console.log(centercountlist);
 		
 		var barChart = new Chart(myChartOne,{
 			type:'bar',//pie,line,doughnut,polarArea
@@ -64,20 +71,7 @@
 				datasets : [{
 					label:'회원등록 추이',	
 					
-					data: [
-						10,
-						20,
-						100,
-						70,
-						50,
-						90,
-						40,
-						60,
-						70,
-						100,
-						60,
-						45
-					]					
+					data: centercountlist	
 				}]
 			}
 		});
